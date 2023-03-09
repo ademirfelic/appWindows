@@ -35,7 +35,7 @@ class MyApp(App):
                 if coletas == codigo:
                     coleta = requisicao_dic[dados]['coletas'][coletas]['coleta'].split(',')
                     for cod in coleta:
-                        texto += f'{cod}        1\n'
+                        texto += f'{cod[1:]}                       1\n'
 
                     with open('../../coleta.txt', 'w') as arquivo:
                         arquivo.write(texto)
